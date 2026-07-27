@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Md. Osama — Projects</title>
+<meta name="description" content="Selected projects by Md. Osama.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ============ SIDEBAR (same on every page — edit here, then copy into the other 6 files) ============ -->
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="avatar">
+        <img src="images/profile.jpg" alt="Osama" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="avatar-fallback">O</div>
+      </div>
+
+      <h1 class="name">Osama</h1>
+      <p class="role">M.Sc.(Ongoing), CSE, RUET · B.Sc. in CSE, CUET</p>
+
+      <div class="contact-block">
+        <p><span>Personal</span><a href="mailto:osamasohag39@gmail.com">osamasohag39@gmail.com</a></p>
+        <p><span>Official</span><a href="mailto:your.official@university.edu">your.official@university.edu</a></p>
+      </div>
+
+      <p class="tagline">
+        M.Sc. researcher studying machine unlearning for morphologically rich languages.
+        Also building hands-on engineering skills, one project at a time.
+      </p>
+
+      <nav class="social-links" aria-label="Social links">
+        <a href="https://github.com/123Osama" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/osama39/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=UkB_a_IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://aclanthology.org/people/md-osama/unverified/" target="_blank" rel="noopener">ACL Anthology</a>
+      </nav>
+
+      <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+
+      <ul class="quick-facts">
+        <li><span>Focus</span>Machine Unlearning · Bangla NLP</li>
+        <li><span>Target venue</span>ACM TALLIP</li>
+        <li><span>Lab</span>Your Lab / Advisor Name</li>
+      </ul>
+    </div>
+
+    <p class="sidebar-footer">© <span id="year"></span> Osama</p>
+  </aside>
+
+  <!-- ============ MAIN CONTENT — THIS PAGE ONLY: projects.html ============ -->
+  <main class="content">
+
+    <nav class="topnav" aria-label="Section navigation">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="publications.html">Publications</a>
+      <a href="skills.html">Skills</a>
+      <a href="thoughts.html">My Thought</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="section">
+      <h3 class="section-title">Projects</h3>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <h4>Bangla Book Recommendation System</h4>
+          <p>Flask-based collaborative filtering recommender built on the Book-Crossing dataset.</p>
+          <div class="tags"><span>Python</span><span>Flask</span><span>Collaborative Filtering</span></div>
+          <a href="#" target="_blank" rel="noopener">View repo →</a>
+        </article>
+
+        <article class="project-card">
+          <h4>Daily Muslim Life Manager</h4>
+          <p>Full-stack app for daily prayer, habit, and routine tracking, built end-to-end.</p>
+          <div class="tags"><span>Django</span><span>React</span></div>
+          <a href="#" target="_blank" rel="noopener">View repo →</a>
+        </article>
+
+        <article class="project-card">
+          <h4>Git &amp; GitHub Lab Manual</h4>
+          <p>A university-standard lab manual walking students through Git and GitHub fundamentals.</p>
+          <div class="tags"><span>Documentation</span><span>Git</span></div>
+          <a href="#" target="_blank" rel="noopener">View doc →</a>
+        </article>
+      </div>
+      <p class="edit-note">[Swap in real repo links, and add/remove project cards as needed.]</p>
+    </section>
+
+    <footer class="page-footer">
+      <p>Built with plain HTML/CSS/JS · Hosted on GitHub Pages</p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

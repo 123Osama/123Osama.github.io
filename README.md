@@ -1,57 +1,67 @@
-<<<<<<< HEAD
-# Osama — Portfolio
+# Osama — Portfolio (multi-page version)
 
-A static portfolio site (plain HTML/CSS/JS, no build step) styled after academic personal sites,
-built around the machine unlearning + Bangla NLP thesis.
+Each nav item is now its own real HTML file — clicking "Research" loads `research.html`,
+not just an anchor-scroll on one long page. This makes editing far simpler: open the one
+file for the page you want to change, and the sidebar/nav are identical across all of them.
 
-## 1. What to edit before publishing
+## File structure
 
-- `index.html`
-  - Replace `your.email@example.com`, GitHub/LinkedIn/Scholar links, and `[Your Lab / Advisor Name]`
-  - Rewrite the **About** paragraph in your own voice
-  - Fill in real **Projects** repo links
-  - Update the **Updates** timeline with real dates/milestones
-  - Delete any `[Edit this...]` / `.edit-note` placeholder text once done
-- `images/profile.jpg` — add a real photo here (square, at least 300x300px). If missing, the page shows a fallback initial instead of breaking.
-- `cv.pdf` — drop your CV in the project root with this exact filename, or update the link in `index.html`.
-
-## 2. Publish it on GitHub Pages
-
-**Option A — personal/user site (URL: `https://your-username.github.io`)**
-
-1. Create a new GitHub repo named **exactly** `your-username.github.io` (replace with your actual GitHub username).
-2. From this project folder, run:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio"
-   git branch -M main
-   git remote add origin https://github.com/your-username/your-username.github.io.git
-   git push -u origin main
-   ```
-3. Go to the repo → **Settings → Pages** → under "Build and deployment", set **Source: Deploy from a branch**, branch **main**, folder **/(root)** → Save.
-4. Wait 1–2 minutes, then visit `https://your-username.github.io`.
-
-**Option B — project site (URL: `https://your-username.github.io/portfolio`)**
-
-Same steps, but the repo can be named anything (e.g. `portfolio`), and your site will live at
-`https://your-username.github.io/<repo-name>`.
-
-## 3. Making future edits
-
-Just edit the files locally, then:
-```bash
-git add .
-git commit -m "Update content"
-git push
 ```
-GitHub Pages redeploys automatically within a minute or two.
+├── index.html          ← Home (hero, morpheme demo, bio, scrollable Updates window)
+├── research.html        ← Research / thesis
+├── projects.html        ← Projects
+├── publications.html    ← Publications
+├── skills.html           ← Skills
+├── thoughts.html         ← My Thought (blog-style entries)
+├── contact.html          ← Contact
+├── css/style.css        ← shared styling for all pages
+├── js/script.js         ← shared behavior (footer year, morpheme demo) for all pages
+├── images/profile.jpg   ← your photo (add this yourself)
+└── cv.pdf               ← your CV (add this yourself)
+```
 
-## 4. Optional next steps
+## How to edit each page
 
-- Add a custom domain via repo **Settings → Pages → Custom domain**.
-- Swap in real publications once your thesis produces a paper.
-- If you'd rather use Jekyll/AcademicPages later (like the Omar Sharif site you referenced), that's a bigger theme with a Ruby build step — this plain version is meant to get you live today with zero dependencies.
-=======
-HI
->>>>>>> 676bf753ce586e0d8dd43de3222b45a1cf79168b
+Every page has the **same two sections**:
+1. `<aside class="sidebar">` — identical on all 7 files. If you change anything here
+   (your name, email, links, tagline), you need to copy that same change into **all 7**
+   HTML files, since there's no shared template engine — this is plain static HTML.
+2. `<main class="content">` — this is what's unique per page. Only edit the content
+   inside `<main>` for the page you're working on.
+
+**The Updates window lives only on `index.html`** (inside the `.updates-box` div), exactly
+as you asked — it doesn't appear on any other page, and it scrolls independently inside its
+own small box rather than scrolling the whole page.
+
+## Nav bar
+
+The nav bar at the top of `<main>` is the same 7 links on every page:
+```html
+<nav class="topnav" aria-label="Section navigation">
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="projects.html">Projects</a>
+  <a href="publications.html">Publications</a>
+  <a href="skills.html">Skills</a>
+  <a href="thoughts.html">My Thought</a>
+  <a href="contact.html">Contact</a>
+</nav>
+```
+The current page's link has `class="active"` added to it (so it's highlighted) — that's
+the only difference in the nav block between files.
+
+## If you'd rather not hand-edit 7 files for sidebar changes
+
+There's a `build.py` script included that generates all 7 pages from one shared sidebar
+template and per-page content blocks — if you have Python installed, edit `build.py`
+instead of the HTML files directly, then run:
+```bash
+python3 build.py
+```
+This regenerates all 7 HTML files at once so the sidebar only needs to change in one
+place. This is optional — plain HTML editing works fine too, it's just more repetitive.
+
+## Publishing
+
+Same as before — push all files (including the `css/` and `js/` folders) to your
+`123Osama.github.io` repo and enable GitHub Pages from Settings → Pages.

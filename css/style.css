@@ -175,8 +175,9 @@ a:focus-visible, button:focus-visible {
   background: var(--bg);
   z-index: 10;
 }
-.topnav a { color: var(--muted); }
+.topnav a { color: var(--muted); padding-bottom: 0.35rem; border-bottom: 2px solid transparent; }
 .topnav a:hover { color: var(--accent); text-decoration: none; }
+.topnav a.active { color: var(--accent); border-bottom-color: var(--accent); }
 
 /* ============ HERO / HOME ============ */
 .hero { margin-bottom: 4.5rem; }
