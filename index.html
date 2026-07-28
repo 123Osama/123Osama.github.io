@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Md. Osama — Home | Bangla NLP &amp; Machine Unlearning</title>
-<meta name="description" content="Md. Osama — M.Sc.(Ongoing) in CSE, RUET, researching machine unlearning for morphologically rich Bangla text.">
+<!-- <title>Md. Osama — Home | Bangla NLP &amp; Machine Unlearning</title> -->
+<!-- <meta name="description" content="Md. Osama — M.Sc.(Ongoing) in CSE, RUET, researching machine unlearning for morphologically rich Bangla text."> -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -24,36 +26,37 @@
         <div class="avatar-fallback">O</div>
       </div>
 
-      <h1 class="name">Osama</h1>
-      <p class="role">M.Sc.(Ongoing), CSE, RUET · B.Sc. in CSE, CUET</p>
-
-      <div class="contact-block">
-        <p><span>Personal</span><a href="mailto:osamasohag39@gmail.com">osamasohag39@gmail.com</a></p>
-        <p><span>Official</span><a href="mailto:your.official@university.edu">your.official@university.edu</a></p>
-      </div>
+      <h1 class="name">Md. Osama</h1>
+      <p class="role">Lecturer, CSE, BAUST | M.Sc.(Ongoing), CSE, RUET | B.Sc. in CSE, CUET</p>
 
       <p class="tagline">
-        M.Sc. researcher studying machine unlearning for morphologically rich languages.
-        Also building hands-on engineering skills, one project at a time.
+        Pursuing an M.Sc. in CSE with a focus on Large Language Models, Natural Language Processing, and Machine Unlearning.
       </p>
-
-      <nav class="social-links" aria-label="Social links">
+      <nav class="social-links" aria-label="Contact and Social Links">
+        <a href="https://maps.google.com/?q=Saidpur,+Nilphamari,+Bangladesh"
+     target="_blank"
+     rel="noopener">
+    <i class="fa-solid fa-location-dot"></i>
+    Saidpur, Nilphamari, Bangladesh
+        </a>
+        <a href="mailto:osamasohag39@gmail.com">Email</a>
+        <!-- <a href="mailto:osama_cse@baust.edu.bd">osama_cse@baust.edu.bd</a> -->
         <a href="https://github.com/123Osama" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/osama39/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=UkB_a_IAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
         <a href="https://aclanthology.org/people/md-osama/unverified/" target="_blank" rel="noopener">ACL Anthology</a>
       </nav>
 
-      <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+      <a class="cv-btn" href="cv.pdf" target="_blank" rel="noopener">My CV ↓</a>
 
-      <ul class="quick-facts">
+      <!-- <ul class="quick-facts">
         <li><span>Focus</span>Machine Unlearning · Bangla NLP</li>
         <li><span>Target venue</span>ACM TALLIP</li>
         <li><span>Lab</span>Your Lab / Advisor Name</li>
-      </ul>
+      </ul> -->
     </div>
 
-    <p class="sidebar-footer">© <span id="year"></span> Osama</p>
+    <p class="sidebar-footer">© <span id="year"></span> Md. Osama</p>
   </aside>
 
   <!-- ============ MAIN CONTENT — THIS PAGE ONLY: index.html ============ -->
@@ -61,63 +64,78 @@
 
     <nav class="topnav" aria-label="Section navigation">
       <a href="index.html" class="active">Home</a>
-      <a href="research.html">Research</a>
+      <a href="research.html">Research & Publications</a>
       <a href="projects.html">Projects</a>
-      <a href="publications.html">Publications</a>
-      <a href="skills.html">Skills</a>
-      <a href="thoughts.html">My Thought</a>
+      <a href="skills.html">Skills/Achievements</a>
+      <a href="thoughts.html">My Quotes</a>
       <a href="contact.html">Contact</a>
     </nav>
 
     <section class="section hero">
+
       <p class="eyebrow">Hello, I'm Osama</p>
-      <h2 class="hero-line">I build benchmarks for <span class="hl">unlearning</span><br>in languages that don't forget easily.</h2>
+
+      <!-- <h2 class="hero-line">
+        Lecturer, AI Researcher, and M.Sc. Student in Computer Science & Engineering.
+      </h2> -->
 
       <p class="hero-sub">
-        Most machine unlearning research is built and tested on English. My thesis asks what
-        happens when you ask a model to <em>forget</em> something in a language like Bangla,
-        where a single word can carry a root, tense, number, and case all stitched together.
-        Does that structure make forgetting harder to verify — or easier to fake?
+        I am a Lecturer in the Department of Computer Science and Engineering at Bangladesh Army
+        University of Science and Technology (BAUST), Bangladesh, and currently pursuing an M.Sc.
+        in CSE at RUET. My research interests include Large Language Models (LLMs), Natural Language
+        Processing (NLP), Machine Unlearning, and trustworthy AI for low-resource languages,
+        particularly Bangla.
       </p>
 
-      <!-- Signature interactive element: morpheme decomposition, English example -->
-      <div class="morph-demo" id="morphDemo">
-        <p class="morph-caption">Tap a piece of the word</p>
-        <div class="morph-word" role="group" aria-label="Word broken into morphemes">
-          <button class="morph" data-gloss="un- — negation prefix, “not”">un</button>
-          <button class="morph" data-gloss="forget — the root verb, what's being removed">forget</button>
-          <button class="morph" data-gloss="-table — suffix, “capable of being”">table</button>
-        </div>
-        <p class="morph-meaning">unforgettable <span>→</span> <span id="morphGloss">one word, three layers of meaning fused together — the same layering that makes Bangla unlearning hard to measure.</span></p>
-      </div>
+      <!-- Contact -->
+      <!-- Official Contact -->
+    <div class="hero-contact">
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        <strong>Official Contact:</strong>
+        <a href="mailto:osama_cse@baust.edu.bd">osama_cse@baust.edu.bd</a>
+      </p>
+    </div>
 
-      <!-- Personal info / bio -->
-      <div class="bio">
-        <p>
-          I'm an M.Sc. student in Computer Science &amp; Engineering, currently in the early
-          phase of my thesis. I work at the intersection of <strong>machine unlearning</strong>
-          and <strong>Bangla NLP</strong> — figuring out whether existing unlearning methods,
-          mostly designed and tested on English, actually hold up against a morphologically
-          rich, low-resource language.
-        </p>
-        <p>
-          Outside of research, I'm slowly building up hands-on engineering skills — Python,
-          Flask, Django, and full-stack project work — and I have a long-running interest in
-          Islamic history. [Edit this paragraph to make it sound like you.]
-        </p>
-      </div>
+      <!-- Current Focus -->
+    <div class="current-focus">
+      <h3>Running Tasks</h3>
 
-      <!-- Scrollable updates window — lives ONLY on Home, per your request -->
+      <ul class="current-list">
+        <li>Developing a benchmark for evaluating machine unlearning methods in Bangla LLMs.</li>
+        <li>Designing a morphology-aware forgetting evaluation framework.</li>
+        <li>Building datasets and evaluation pipelines for low-resource language unlearning.</li>
+        <li>Learning full-stack development with Django and modern web technologies.</li>
+      </ul>
+    </div>
+
+      <!-- Updates -->
       <div class="updates-box">
-        <h3 class="updates-title">Updates</h3>
+        <h3 class="updates-title">Highlights</h3>
+
         <ul class="timeline">
-          <li><span class="tdate">[Month, Year]</span> Selected thesis direction: machine unlearning for morphologically rich Bangla text.</li>
-          <li><span class="tdate">[Month, Year]</span> Began benchmark schema design for the unlearning study.</li>
-          <li><span class="tdate">[Month, Year]</span> [Add your next milestone here.]</li>
-          <li><span class="tdate">[Month, Year]</span> [Add another update here.]</li>
-          <li><span class="tdate">[Month, Year]</span> [Add another update here.]</li>
+          <li>
+            <span class="tdate">Jul 2026</span>
+            Started my M.Sc. thesis on Machine Unlearning for Bangla LLMs.
+          </li>
+
+          <li>
+            <span class="tdate">Jun 2026</span>
+            Published research on egg quality assessment in <em>Neural Computing and Applications</em>.
+          </li>
+
+          <li>
+            <span class="tdate">Jan 2026</span>
+            Continued research on trustworthy and efficient LLM evaluation for Bangla.
+          </li>
+
+          <li>
+            <span class="tdate">2025</span>
+            Published papers at ACL Findings and the NLP Journal.
+          </li>
         </ul>
       </div>
+
     </section>
 
     <footer class="page-footer">
